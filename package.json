@@ -11,7 +11,7 @@
     "lint:css:fix": "stylelint **/**/*scss --fix",
     "lint:ts": "eslint --ignore-pattern **/**/*.scss.d.ts . --ext .ts,.tsx",
     "lint:ts:fix": "eslint --ignore-pattern **/**/*.scss.d.ts . --ext .ts,.tsx --fix",
-    "lint:all": "yarn lint:ts && yarn lint:css",
+    "lint:all": "npm run lint:ts && yarn lint:css",
     "build": "ENV=production webpack"
   },
   "author": "",
