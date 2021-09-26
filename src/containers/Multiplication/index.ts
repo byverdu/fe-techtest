@@ -1,1 +1,1 @@
-export {default} from './Multiplication';
+export { default } from './Multiplication';

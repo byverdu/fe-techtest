@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-import {ArithmeticOperations} from '../../../../typings/app.types';
+import { ArithmeticOperations } from '../../../../typings/app.types';
 
 import styles from './styles.scss';
 
-type Props = {operation: ArithmeticOperations};
+type Props = { operation: ArithmeticOperations };
 
 const textArithmeticOperationMap = new Map<ArithmeticOperations, string>([
   [
@@ -20,7 +20,7 @@ const activityDescriptionMap = new Map<ArithmeticOperations, string>([
   ],
 ]);
 
-export default function Description({operation}: Props) {
+export default function Description({ operation }: Props): ReactElement {
   const arithmeticOperationText = textArithmeticOperationMap.get(operation);
   const activityDescriptionText = activityDescriptionMap.get(operation);
 

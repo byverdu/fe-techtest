@@ -1,7 +1,7 @@
-import React, {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 
-type Props = {children: ReactElement | ReactElement[]};
+type Props = { children: ReactElement | ReactElement[] };
 
-export default function Header({children}: Props) {
+export default function Header({ children }: Props): ReactElement {
   return <header>{children}</header>;
 }

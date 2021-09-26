@@ -18,12 +18,12 @@ describe('gridBuilder', () => {
     expect(gridBuilder(1)).toBeInstanceOf(Array);
   });
 
-  Array.from({length: 10}, () => Math.ceil(Math.random() * 144)).forEach(
-    (length) => {
+  Array.from({ length: 10 }, () => Math.ceil(Math.random() * 144)).forEach(
+    length => {
       it(`should return an array with the length passed, case for ${length}`, () => {
         expect(gridBuilder(length)).toHaveLength(length);
       });
-    }
+    },
   );
 });
 

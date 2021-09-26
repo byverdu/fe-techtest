@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, ShallowWrapper} from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import Button from '../../src/components/atoms/Button';
 
 describe('List Component', () => {
@@ -7,7 +7,9 @@ describe('List Component', () => {
 
   beforeEach(() => {
     component = shallow(
-      <Button activeNumber={2} text={4} onPress={() => {}} />
+      <Button activeNumber={2}
+text={4}
+onPress={() => {}} />,
     );
   });
 

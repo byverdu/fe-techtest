@@ -16,7 +16,8 @@
   },
   "include": [
     "./typings/*",
-    "./src/**/*"
+    "./src/**/*",
+    "./test/**/*"
   ],
   "exclude": []
 }

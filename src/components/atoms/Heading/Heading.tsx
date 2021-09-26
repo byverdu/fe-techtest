@@ -1,4 +1,4 @@
-import React, {CSSProperties, ReactElement} from 'react';
+import React, { CSSProperties, ReactElement } from 'react';
 
 import styles from './styles.scss';
 
@@ -16,7 +16,7 @@ export default function Heading({
 }: Props): ReactElement {
   const componentAttr = {
     className: styles[`heading-${level}`],
-    ...(stylesOverWrite && {style: stylesOverWrite}),
+    ...(stylesOverWrite && { style: stylesOverWrite }),
   };
 
   return React.createElement(level, componentAttr, content);
