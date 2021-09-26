@@ -1,16 +1,16 @@
-@import "../../../config.scss";
-@import "../../../config.scss";
+@import "../../../config";
+@import "../../../config";
 
 .button {
-  margin: 0.625rem 0;
-  padding: 1.25rem;
   display: inline-block;
   font-size: 1.389rem;
+  margin: 0.625rem 0;
+  padding: 1.25rem;
 
   @media screen and (max-width: $mobile-breakpoint) {
     display: block;
-    width: 100%;
     margin: 1.25rem auto;
+    width: 100%;
   }
 
   @media screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
@@ -21,6 +21,7 @@
     width: 30%;
   }
 }
+
 .active {
   background-color: $monza;
   color: $white;

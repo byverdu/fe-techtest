@@ -7,6 +7,8 @@
     "test:watch": "jest --watch",
     "test": "jest",
     "dev": "ENV=development webpack-dev-server --watch",
+    "lint:css": "stylelint **/**/*scss",
+    "lint:css:fix": "stylelint **/**/*scss --fix",
     "build": "ENV=production webpack"
   },
   "author": "",
@@ -17,7 +19,10 @@
     "@react-aria/interactions": "^3.6.0",
     "@react-aria/utils": "^3.9.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-order": "^4.1.0"
   },
   "babel": {
     "presets": [
