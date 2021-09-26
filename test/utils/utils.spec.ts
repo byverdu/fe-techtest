@@ -1,4 +1,5 @@
 import gridBuilder from '../../src/utils/gridBuilder.util';
+import getRandomValues from '../../src/utils/getRandomNumber.util';
 
 describe('gridBuilder', () => {
   it('should be defined', () => {
@@ -24,4 +25,27 @@ describe('gridBuilder', () => {
       });
     }
   );
+});
+
+describe('getRandomValues', () => {
+  it('should be defined', () => {
+    expect(getRandomValues).not.toEqual(undefined);
+  });
+
+  it('should return a number smaller or equal if window is not defined', () => {
+    const randNumbers = Number(getRandomValues(34)) <= 1000;
+    expect(randNumbers).toEqual(true);
+  });
+
+  it('should return a string with dashes if window is defined', () => {
+    Object.defineProperty(global, 'window', {
+      value: {
+        crypto: {
+          getRandomValues: () => ['9', '2'],
+        },
+      },
+      writable: true,
+    });
+    expect(getRandomValues(3)).toEqual('9-2');
+  });
 });
