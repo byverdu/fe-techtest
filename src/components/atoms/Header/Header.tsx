@@ -18,6 +18,6 @@ export default function Header({
     className: styles[`heading-${headerType}`],
     ...(stylesOverWrite && {style: stylesOverWrite}),
   };
-  console.log(styles);
+
   return React.createElement(headerType, componentAttr, title);
 }
