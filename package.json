@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "16.4.0",
+    "react-dom": "16.4.0"
   },
   "babel": {
     "presets": [
@@ -33,6 +33,9 @@
         "isolatedModules": true
       }
     },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
     "transform": {
       ".+\\.ts(x?)$": "ts-jest"
     },
@@ -50,12 +53,16 @@
   "devDependencies": {
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
+    "@types/enzyme": "^3.10.9",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "3.4.2",
     "css-modules-typescript-loader": "^4.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "fork-ts-checker-webpack-plugin": "^6.3.3",
     "html-webpack-plugin": "^4.5.2",
     "identity-obj-proxy": "^3.0.0",

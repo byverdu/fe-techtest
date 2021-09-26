@@ -1,5 +1,7 @@
 import React, {ReactElement} from 'react';
 
-const App = (): ReactElement => <div>Hello world</div>;
+import Header from 'components/atoms/Header';
+
+const App = (): ReactElement => <Header title="hello" headerType="h1" />;
 
 export default App;

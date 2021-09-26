@@ -1,0 +1,14 @@
+$font-sizes: (
+  "h1": 34,
+  "h2": 24,
+  "h3": 18,
+  "h4": 16,
+  "h5": 13,
+  "h6": 10,
+);
+
+@each $name, $size in $font-sizes {
+  .heading-#{$name} {
+    font-size: $size#{"px"};
+  }
+}
