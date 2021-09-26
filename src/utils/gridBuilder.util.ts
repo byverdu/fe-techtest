@@ -1,3 +1,8 @@
+/**
+ * Builds array with same length as the argument passed
+ * @param {number} length Desired grid length
+ * @returns Array
+ */
 export default function gridBuilder(length: number) {
   if (!length) throw new Error('You must specify a grid length');
   if (typeof length !== 'number')
