@@ -4,6 +4,7 @@ const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 const ENV = process.env.ENV || 'development'
 const baseUrl = './src'
@@ -54,7 +55,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
-    
+    new CopyPlugin({
+      patterns: [
+        { from: './server' },
+      ],
+    }),
   ],
     module: {
       rules: [

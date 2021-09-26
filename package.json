@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node build/server.js",
+    "dev": "ENV=development webpack-dev-server --watch",
+    "build": "ENV=production webpack",
     "test:watch": "jest --watch",
     "test": "jest",
-    "dev": "ENV=development webpack-dev-server --watch",
     "lint:css": "stylelint **/**/*scss",
     "lint:css:fix": "stylelint **/**/*scss --fix",
     "lint:ts": "eslint --ignore-pattern **/**/*.scss.d.ts . --ext .ts,.tsx",
     "lint:ts:fix": "eslint --ignore-pattern **/**/*.scss.d.ts . --ext .ts,.tsx --fix",
-    "lint:all": "npm run lint:ts && yarn lint:css",
-    "build": "ENV=production webpack"
+    "lint:all": "npm run lint:ts && yarn lint:css"
   },
   "author": "",
   "pre-commit": [
@@ -79,7 +80,7 @@
     "@types/react-dom": "^17.0.9",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^9.0.1",
+    "copy-webpack-plugin": "^6.2.1",
     "css-loader": "3.4.2",
     "css-modules-typescript-loader": "^4.0.1",
     "enzyme": "^3.11.0",
