@@ -25,16 +25,9 @@
     "@react-aria/focus": "^3.5.0",
     "@react-aria/interactions": "^3.6.0",
     "@react-aria/utils": "^3.9.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-typescript": "^14.0.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-sass-guidelines": "^8.0.0",
-    "stylelint-order": "^4.1.0"
+    "react-dom": "^17.0.2"
   },
   "babel": {
     "presets": [
@@ -84,6 +77,10 @@
     "css-loader": "3.4.2",
     "css-modules-typescript-loader": "^4.0.1",
     "enzyme": "^3.11.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^6.3.3",
@@ -93,6 +90,9 @@
     "node-sass-chokidar": "^1.5.0",
     "pre-commit": "^1.2.2",
     "sass-loader": "8.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-order": "^4.1.0",
     "style-loader": "1.0.0",
     "ts-jest": "^27.0.5",
     "ts-loader": "6.2.1",
