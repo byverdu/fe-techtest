@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "ES2020",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "dom",
+      "es2015",
+      "ES2017"
+    ]
+  },
+  "include": [
+    "./typings/*",
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./test/**/*"
+  ]
+}

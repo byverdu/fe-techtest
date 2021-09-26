@@ -1,0 +1,21 @@
+@import "../../config";
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1.25rem;
+  width: 100%;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    max-width: 375px;
+  }
+
+  @media screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    max-width: 768px;
+    width: 95%;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    max-width: 1024px;
+    width: 95%;
+  }
+}

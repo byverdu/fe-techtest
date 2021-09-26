@@ -4,20 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node build/server.js",
+    "dev": "ENV=development webpack-dev-server --watch",
+    "build": "ENV=production webpack",
+    "test:watch": "jest --watch",
     "test": "jest",
-    "start": "webpack-dev-server --quiet"
+    "lint:css": "stylelint **/**/*scss",
+    "lint:css:fix": "stylelint **/**/*scss --fix",
+    "lint:ts": "eslint --ignore-pattern **/**/*.scss.d.ts . --ext .ts,.tsx",
+    "lint:ts:fix": "eslint --ignore-pattern **/**/*.scss.d.ts . --ext .ts,.tsx --fix",
+    "lint:all": "npm run lint:ts && yarn lint:css"
   },
   "author": "",
+  "pre-commit": [
+    "lint:all"
+  ],
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "7.7.4",
-    "@babel/preset-env": "7.7.4",
-    "css-loader": "3.2.0",
-    "jest": "24.9.0",
-    "style-loader": "1.0.0",
-    "webpack": "4.41.2",
-    "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.9.0"
+    "@react-aria/button": "^3.3.4",
+    "@react-aria/focus": "^3.5.0",
+    "@react-aria/interactions": "^3.6.0",
+    "@react-aria/utils": "^3.9.0",
+    "eslint-plugin-react": "^7.26.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "babel": {
     "presets": [
@@ -32,9 +42,64 @@
     ]
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
+    "transform": {
+      ".+\\.ts(x?)$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "tsx"
+    ],
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.ts(x?)$",
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
-      "\\.(css|less|scss)$": "<rootDir>/test/__mocks__/styleMock.js"
+      "\\.(css|less|scss)$": "identity-obj-proxy"
     }
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "@types/enzyme": "^3.10.9",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "3.4.2",
+    "css-modules-typescript-loader": "^4.0.1",
+    "enzyme": "^3.11.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.3.3",
+    "html-webpack-plugin": "^4.5.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "27.0.0",
+    "node-sass-chokidar": "^1.5.0",
+    "pre-commit": "^1.2.2",
+    "sass-loader": "8.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-order": "^4.1.0",
+    "style-loader": "1.0.0",
+    "ts-jest": "^27.0.5",
+    "ts-loader": "6.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^4.4.3",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "^3.11.0"
   }
 }

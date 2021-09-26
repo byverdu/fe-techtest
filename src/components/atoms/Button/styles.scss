@@ -1,0 +1,28 @@
+@import "../../../config";
+@import "../../../config";
+
+.button {
+  display: inline-block;
+  font-size: 1.389rem;
+  margin: 0.625rem 0;
+  padding: 1.25rem;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: block;
+    margin: 1.25rem auto;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    width: 45%;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 30%;
+  }
+}
+
+.active {
+  background-color: $monza;
+  color: $white;
+}

@@ -1,8 +1,19 @@
 # Which? Javascript Exercise
 
+## Solution
+
+Some of the libraries that I have used are the following:
+
+1. Typescript, so I could take advantage about the typings and avoid some errors
+1. SCSS, CSS preprocessor to allow me to write faster CSS by using its features
+1. react-aria, to ensure the buttons were accessible
+1. stylelint, to follow good practices and fix issues for CSS
+1. eslint, to follow good practices and fix issues for React and Typescript
+1. CSS modules, to keep styles scoped within a component
+
 ## Getting up and running
 
-Clone or fork this repo. If you'd rather start from scratch with your own setup that's fine too, as long as you complete [the exercise](#the-exercise).
+Clone or fork this repo, `$git clone https://github.com/byverdu/fe-techtest.git`. If you'd rather start from scratch with your own setup that's fine too, as long as you complete [the exercise](#the-exercise).
 
 Which? primarily uses React for its' frontend development requirements, but if you wish to complete this test using native JavaScript or another framework we will not penalise you, and will be interested to understand your decisions.
 
@@ -26,11 +37,11 @@ We have specified all the dependencies we need in the `package.json` file. Npm w
 
 Ok, time to run the app. Npm takes care of business again:
 
-`$ npm start`
+`$ npm run dev`
 
 This will fire up the wepback dev server. It's not important to understand how it works for now.
 
-Open [http://localhost:8080/](http://localhost:8080/) in your browser and you should see a basic html page. If you open the development console in your browser you should see a welcome message.
+Open [http://localhost:9000/](http://localhost:9000/) in your browser and you should see a basic html page. If you open the development console in your browser you should see a welcome message.
 
 ### Development
 
@@ -41,6 +52,12 @@ The source files are located in `src/`. If you change a file, webpack will reloa
 You can run the example tests:
 
 `$ npm test`
+
+### Build the application
+
+`$ npm run build`
+
+Open [http://localhost:9000/](http://localhost:9000/) in your browser.
 
 ## The exercise
 
