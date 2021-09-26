@@ -1,11 +1,11 @@
 import React, {ReactElement} from 'react';
 
-import Header from 'components/atoms/Header';
+import Heading from 'components/atoms/Heading';
 import Grid from 'components/molecules/Grid';
 
 const App = (): ReactElement => (
   <>
-    <Header title="hello" headerType="h1" />
+    <Heading content="Let's learn some Maths" level="h1" />
     <Grid gridLength={144} />
   </>
 );
