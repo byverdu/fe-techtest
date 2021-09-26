@@ -1,6 +1,8 @@
 import React, {useRef, useState, useEffect, ReactElement} from 'react';
 import {useButton} from '@react-aria/button';
 
+import styles from './styles.scss';
+
 type Props = {
   activeNumber: number;
   text: number;
@@ -20,7 +22,7 @@ export default function Button(props: Props) {
 
   return (
     <button
-      style={{background: isActive ? 'red' : undefined}}
+      className={`${styles.button} ${isActive && styles.active}`}
       onPress={onPress}
       {...buttonProps}
       ref={ref}>

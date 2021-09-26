@@ -1,7 +1,10 @@
 import React, {useState, useCallback, ReactElement} from 'react';
+
 import Button from 'components/atoms/Button';
 import gridBuilder from 'utils/gridBuilder.util';
 import getRandomNumber from '../../../utils/getRandomNumber.util';
+
+import styles from './styles.scss';
 
 type Props = {length: number};
 
@@ -24,5 +27,5 @@ export default function Grid({length}: Props): ReactElement {
     />
   ));
 
-  return <>{grid}</>;
+  return <section className={styles['grid-container']}>{grid}</section>;
 }

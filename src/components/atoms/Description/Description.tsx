@@ -2,6 +2,8 @@ import React from 'react';
 
 import {ArithmeticOperations} from '../../../../typings/app.types';
 
+import styles from './styles.scss';
+
 type Props = {operation: ArithmeticOperations};
 
 const textArithmeticOperationMap = new Map<ArithmeticOperations, string>([
@@ -24,8 +26,8 @@ export default function Description({operation}: Props) {
 
   return (
     <main role="main">
-      <p>{arithmeticOperationText}</p>
-      <p>{activityDescriptionText}</p>
+      <p className={styles.text}>{arithmeticOperationText}</p>
+      <p className={styles.text}>{activityDescriptionText}</p>
     </main>
   );
 }
