@@ -23,9 +23,9 @@ export default function Description({operation}: Props) {
   const activityDescriptionText = activityDescriptionMap.get(operation);
 
   return (
-    <>
+    <main role="main">
       <p>{arithmeticOperationText}</p>
       <p>{activityDescriptionText}</p>
-    </>
+    </main>
   );
 }
